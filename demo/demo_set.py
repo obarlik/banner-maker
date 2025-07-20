@@ -26,31 +26,6 @@ def generate_demo_set(args_dict):
         demo = presets[idx - 1].copy()
         demo["preset_name"] = preset_names[idx - 1]
         
-        # Set default values for missing parameters
-        demo.setdefault("title_font_size", 64)
-        demo.setdefault("subtitle_font_size", 28)
-        demo.setdefault("icon_shadow", False)
-        demo.setdefault("icon_outline", False)
-        demo.setdefault("texture_density", 1.0)
-        demo.setdefault("texture_opacity", 20)
-        demo.setdefault("shadow_opacity", 100)
-        demo.setdefault("label_font_size", 14)
-        demo.setdefault("label_h", 32)
-        demo.setdefault("label_padding", 6)
-        demo.setdefault("label_radius", 8)
-        demo.setdefault("label_line_spacing", 2)
-        demo.setdefault("grid_bg", (30, 30, 30, 255))
-        demo.setdefault("overlay", "none")
-        
-        # Set pattern defaults (renamed from motif)
-        demo.setdefault('pattern', 'none')
-        demo.setdefault('pattern_density', 1.0)
-        demo.setdefault('pattern_opacity', 0 if demo.get('pattern', 'none') == 'none' else 80)
-        demo.setdefault('pattern_colors', None)
-        demo.setdefault('pattern_rotation', 0)
-        demo.setdefault('pattern_jitter', 0.0)
-        demo.setdefault('pattern_size_variance', 0.0)
-        
         # Generate banner
         out_name = f"demo_{idx:02d}.png"
         out_path = os.path.join(demo_dir, out_name)
