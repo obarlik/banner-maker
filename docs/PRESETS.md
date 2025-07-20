@@ -145,20 +145,61 @@ python banner_maker.py --preset cyber_yellow --title "Your Project"
 
 ## Customizing Presets
 
-You can modify any preset by adding additional parameters:
+You can modify any preset by adding additional parameters. Here are visual examples showing how the same preset can be transformed:
+
+### Original Preset
+```bash
+python banner_maker.py --preset modern_blue --title "Original Preset"
+```
+![Original](customization/modern_blue_original.png)
+
+### With Accent Color
+```bash
+python banner_maker.py --preset modern_blue --title "With Red Accent" --accent "red"
+```
+![Red Accent](customization/modern_blue_red_accent.png)
+
+### High Intensity
+```bash
+python banner_maker.py --preset modern_blue --title "High Intensity" --intensity "high"
+```
+![High Intensity](customization/modern_blue_high_intensity.png)
+
+### Rounded Corners
+```bash
+python banner_maker.py --preset modern_blue --title "Rounded Corners" --rounded "30"
+```
+![Rounded Corners](customization/modern_blue_rounded.png)
+
+### With Texture
+```bash
+python banner_maker.py --preset modern_blue --title "With Grain Texture" --texture "grain:25"
+```
+![With Texture](customization/modern_blue_texture.png)
+
+### Combined Effects
+```bash
+python banner_maker.py --preset modern_blue --title "Combined Effects" --accent "orange" --rounded "20" --texture "grain:15" --intensity "medium"
+```
+![Combined Effects](customization/modern_blue_combined.png)
+
+### Common Customization Options
 
 ```bash
 # Add accent color to any preset
-python banner_maker.py --preset modern_blue --title "My Project" --accent "red"
+python banner_maker.py --preset PRESET_NAME --title "My Project" --accent "red"
 
-# Modify intensity
-python banner_maker.py --preset geometric_chaos --title "My Project" --intensity "high"
+# Modify intensity (low/medium/high)
+python banner_maker.py --preset PRESET_NAME --title "My Project" --intensity "high"
 
-# Add rounded corners
-python banner_maker.py --preset vintage_leather --title "My Project" --rounded "25"
+# Add rounded corners (0-50)
+python banner_maker.py --preset PRESET_NAME --title "My Project" --rounded "25"
 
-# Combine with custom elements
-python banner_maker.py --preset ocean_waves --title "My Project" --texture "grain:20"
+# Add texture effects
+python banner_maker.py --preset PRESET_NAME --title "My Project" --texture "grain:20"
+
+# Combine multiple customizations
+python banner_maker.py --preset PRESET_NAME --title "My Project" --accent "purple" --rounded "15" --intensity "medium"
 ```
 
 ## Creating Your Own Presets
