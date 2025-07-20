@@ -1,0 +1,67 @@
+{
+  "name": "vaporwave",
+  "design_score": {
+    "overall": 6.5,
+    "color_harmony": 7,
+    "typography": 6,
+    "composition": 6,
+    "professionalism": 5,
+    "originality": 8,
+    "target_fit": 7
+  },
+  "description": "Pink-blue-purple gradient theme for retro, young and fun projects.",
+  "bg_color_start": "#ff9a9e",
+  "bg_color_end": "#fad0c4",
+  "gradient_type": "diagonal",
+  "texture": "lines",
+  "corner_radius_tl": 24,
+  "corner_radius_tr": 24,
+  "corner_radius_bl": 24,
+  "corner_radius_br": 24,
+  "shape": "blob",
+  "shape_color": [
+    255,
+    20,
+    147,
+    65
+  ],
+  "text_color": "#6a11cb",
+  "border": false,
+  "rounded": true,
+  "shadow": true,
+  "shadow_opacity": 90,
+  "texture_opacity": 10,
+  "texture_density": 0.9,
+  "text_box": true,
+  "text_box_color": "#ffffff99",
+  "text_box_radius": 16,
+  "text_box_padding": 14,
+  "min_contrast": 7.0,
+  "padding": 40,
+  "pattern": "lines",
+  "pattern_density": 1.0,
+  "pattern_opacity": 60,
+  "pattern_colors": [
+    "#fff"
+  ],
+  "pattern_rotation": 0,
+  "pattern_tilt": [
+    0,
+    90
+  ],
+  "pattern_jitter": 0.0,
+  "pattern_size_variance": 0.0,
+  "overlay": "gradient",
+  "overlay_color1": [
+    255,
+    20,
+    147,
+    20
+  ],
+  "overlay_color2": [
+    0,
+    255,
+    255,
+    0
+  ]
+}

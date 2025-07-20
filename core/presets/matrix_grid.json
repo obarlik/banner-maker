@@ -1,0 +1,37 @@
+{
+  "name": "matrix_grid",
+  "design_score": {
+    "overall": 7.5,
+    "color_harmony": 8,
+    "typography": 8,
+    "composition": 7,
+    "professionalism": 7,
+    "originality": 8,
+    "target_fit": 8
+  },
+  "bg_color_start": "#000000",
+  "bg_color_end": "#003300",
+  "gradient_type": "none",
+  "texture": "ascii_grid",
+  "corner_radius_tl": 8,
+  "corner_radius_tr": 8,
+  "corner_radius_bl": 8,
+  "corner_radius_br": 8,
+  "min_contrast": 7.1,
+  "shadow_opacity": 80,
+  "texture_opacity": 10,
+  "texture_density": 1.1,
+  "text_box": true,
+  "text_box_color": "#000000cc",
+  "text_box_radius": 8,
+  "text_box_padding": 10,
+  "pattern": "ascii_grid",
+  "pattern_density": 1.2,
+  "pattern_opacity": 50,
+  "pattern_colors": [
+    "#00ff00"
+  ],
+  "pattern_rotation": 0,
+  "pattern_jitter": 0.0,
+  "pattern_size_variance": 0.0
+}

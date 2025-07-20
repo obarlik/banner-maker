@@ -1,0 +1,38 @@
+{
+  "name": "casual_denim",
+  "design_score": {
+    "overall": 7.3,
+    "color_harmony": 7,
+    "typography": 7,
+    "composition": 7,
+    "professionalism": 7,
+    "originality": 8,
+    "target_fit": 8
+  },
+  "description": "Denim texture and blue tones for casual and everyday projects.",
+  "bg_color_start": "#1e3a8a",
+  "bg_color_end": "#60a5fa",
+  "gradient_type": "vertical",
+  "texture": "denim",
+  "corner_radius_tl": 20,
+  "corner_radius_tr": 20,
+  "corner_radius_bl": 20,
+  "corner_radius_br": 20,
+  "text_color": "#ffffff",
+  "border": true,
+  "rounded": true,
+  "shadow": true,
+  "shadow_opacity": 60,
+  "texture_opacity": 35,
+  "min_contrast": 6.5,
+  "padding": 38,
+  "pattern": "dots",
+  "pattern_density": 1.2,
+  "pattern_opacity": 70,
+  "pattern_colors": [
+    "#ffffff"
+  ],
+  "pattern_rotation": 0,
+  "pattern_jitter": 0.3,
+  "pattern_size_variance": 0.2
+}

@@ -1,0 +1,32 @@
+{
+  "name": "orange_blue",
+  "design_score": {
+    "overall": 7.7,
+    "color_harmony": 8,
+    "typography": 8,
+    "composition": 7,
+    "professionalism": 8,
+    "originality": 7,
+    "target_fit": 8
+  },
+  "bg_color_start": "#ff9800",
+  "bg_color_end": "#0052CC",
+  "gradient_type": "radial",
+  "texture": "lines",
+  "corner_radius_tl": 24,
+  "corner_radius_tr": 40,
+  "corner_radius_bl": 20,
+  "corner_radius_br": 32,
+  "min_contrast": 7.7,
+  "shadow_opacity": 120,
+  "texture_opacity": 18,
+  "pattern": "circles",
+  "pattern_density": 0.7,
+  "pattern_opacity": 40,
+  "pattern_colors": [
+    "#fff"
+  ],
+  "pattern_rotation": 0,
+  "pattern_jitter": 0.05,
+  "pattern_size_variance": 0.3
+}

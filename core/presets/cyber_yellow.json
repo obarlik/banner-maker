@@ -1,0 +1,50 @@
+{
+  "name": "cyber_yellow",
+  "design_score": {
+    "overall": 6.7,
+    "color_harmony": 6,
+    "typography": 7,
+    "composition": 6,
+    "professionalism": 6,
+    "originality": 8,
+    "target_fit": 7
+  },
+  "description": "Creative, neon and technology projects with black-yellow, high contrast theme.",
+  "bg_color_start": "#000000",
+  "bg_color_end": "#ffe600",
+  "gradient_type": "diagonal",
+  "texture": "dots",
+  "corner_radius_tl": 24,
+  "corner_radius_tr": 8,
+  "corner_radius_bl": 24,
+  "corner_radius_br": 8,
+  "shape": "polygon",
+  "shape_color": [
+    255,
+    255,
+    0,
+    50
+  ],
+  "text_color": "#ffe600",
+  "border": false,
+  "rounded": true,
+  "shadow": true,
+  "shadow_opacity": 100,
+  "texture_opacity": 22,
+  "min_contrast": 8.0,
+  "padding": 40,
+  "pattern": "dots",
+  "pattern_density": 1.2,
+  "pattern_opacity": 60,
+  "pattern_colors": [
+    "#ffe600"
+  ],
+  "pattern_rotation": 0,
+  "pattern_jitter": 0.1,
+  "pattern_size_variance": 0.1,
+  "overlay": "lens_flare",
+  "overlay_center": [
+    900,
+    100
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "github_pro",
+  "design_score": {
+    "overall": 7.0,
+    "color_harmony": 7,
+    "typography": 7,
+    "composition": 6,
+    "professionalism": 7,
+    "originality": 7,
+    "target_fit": 8
+  },
+  "bg_color_start": "#388bfd",
+  "bg_color_end": "#b6e0fe",
+  "gradient_type": "vertical",
+  "texture": "canvas",
+  "corner_radius_tl": 8,
+  "corner_radius_tr": 8,
+  "corner_radius_bl": 8,
+  "corner_radius_br": 8,
+  "text_color": "auto",
+  "border": true,
+  "rounded": true,
+  "shadow": true,
+  "shadow_opacity": 60,
+  "texture_opacity": 25,
+  "min_contrast": 7.5,
+  "padding": 40,
+  "theme": "blue_soft",
+  "pattern": "lines",
+  "pattern_density": 1.0,
+  "pattern_opacity": 40,
+  "pattern_colors": [
+    "#388bfd"
+  ],
+  "pattern_rotation": 0,
+  "pattern_jitter": 0.0,
+  "pattern_size_variance": 0.0
+}

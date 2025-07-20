@@ -1,0 +1,38 @@
+{
+  "name": "textile_corduroy",
+  "design_score": {
+    "overall": 7.4,
+    "color_harmony": 7,
+    "typography": 7,
+    "composition": 7,
+    "professionalism": 8,
+    "originality": 8,
+    "target_fit": 7
+  },
+  "description": "Corduroy texture and earth tones for textile and fashion projects.",
+  "bg_color_start": "#8b4513",
+  "bg_color_end": "#daa520",
+  "gradient_type": "horizontal",
+  "texture": "corduroy",
+  "corner_radius_tl": 14,
+  "corner_radius_tr": 14,
+  "corner_radius_bl": 14,
+  "corner_radius_br": 14,
+  "text_color": "#2f1b14",
+  "border": true,
+  "rounded": true,
+  "shadow": true,
+  "shadow_opacity": 75,
+  "texture_opacity": 40,
+  "min_contrast": 5.0,
+  "padding": 42,
+  "pattern": "lines",
+  "pattern_density": 0.9,
+  "pattern_opacity": 35,
+  "pattern_colors": [
+    "#cd853f"
+  ],
+  "pattern_rotation": 90,
+  "pattern_jitter": 0.1,
+  "pattern_size_variance": 0.1
+}

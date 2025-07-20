@@ -1,0 +1,114 @@
+{
+  "name": "geometric_chaos",
+  "design_score": {
+    "overall": 7.1,
+    "color_harmony": 7,
+    "typography": 7,
+    "composition": 6,
+    "professionalism": 7,
+    "originality": 8,
+    "target_fit": 7
+  },
+  "description": "Chaotic arrangement of geometric shapes with vibrant overlaps.",
+  "bg_color_start": "#667eea",
+  "bg_color_end": "#764ba2",
+  "gradient_type": "radial",
+  "texture": "grain",
+  "corner_radius_tl": 20,
+  "corner_radius_tr": 20,
+  "corner_radius_bl": 20,
+  "corner_radius_br": 20,
+  "text_color": "#ffffff",
+  "border": true,
+  "rounded": true,
+  "shadow": true,
+  "shadow_opacity": 80,
+  "texture_opacity": 10,
+  "min_contrast": 6.5,
+  "padding": 38,
+  "pattern": "triangles",
+  "pattern_density": 0.5,
+  "pattern_opacity": 35,
+  "pattern_colors": [
+    "#ffffff"
+  ],
+  "pattern_rotation": 45,
+  "pattern_tilt": [
+    0,
+    360
+  ],
+  "pattern_jitter": 0.3,
+  "pattern_size_variance": 0.4,
+  "shapes": [
+    {
+      "type": "diagonal_bar",
+      "color": [
+        255,
+        255,
+        255,
+        70
+      ],
+      "thickness": 0.2,
+      "angle": 30,
+      "blur": 8
+    },
+    {
+      "type": "ellipse",
+      "color": [
+        255,
+        255,
+        255,
+        50
+      ],
+      "center": [
+        150,
+        180
+      ],
+      "rx": 100,
+      "ry": 60,
+      "blur": 20
+    },
+    {
+      "type": "polygon",
+      "color": [
+        255,
+        255,
+        255,
+        60
+      ],
+      "center": [
+        850,
+        80
+      ],
+      "radius": 80,
+      "sides": 8,
+      "rotation": 0,
+      "blur": 10
+    },
+    {
+      "type": "blob",
+      "color": [
+        255,
+        255,
+        255,
+        45
+      ],
+      "seed": 456,
+      "scale": 0.8,
+      "blur": 25
+    }
+  ],
+  "overlay": "gradient",
+  "overlay_color1": [
+    255,
+    255,
+    255,
+    0
+  ],
+  "overlay_color2": [
+    255,
+    255,
+    255,
+    20
+  ]
+}

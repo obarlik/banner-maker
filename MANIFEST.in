@@ -1,0 +1,17 @@
+include README.md
+include LICENSE
+include requirements.txt
+include demo_defaults.json
+include parameters.json
+recursive-include core/presets *.json
+recursive-include fonts *.ttf *.txt
+recursive-include banner/effects *.py
+recursive-include banner/patterns *.py
+recursive-include banner/shapes *.py
+recursive-include banner/textures *.py
+exclude tests/
+exclude demos/
+exclude *.png
+exclude *.jpg
+global-exclude __pycache__
+global-exclude *.py[co]

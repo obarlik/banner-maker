@@ -1,0 +1,38 @@
+{
+  "name": "pastel_leaf",
+  "design_score": {
+    "overall": 7.4,
+    "color_harmony": 8,
+    "typography": 7,
+    "composition": 7,
+    "professionalism": 7,
+    "originality": 7,
+    "target_fit": 8
+  },
+  "description": "Light green and cream toned soft theme for nature, health and environment themed projects.",
+  "bg_color_start": "#d4fc79",
+  "bg_color_end": "#96e6a1",
+  "gradient_type": "vertical",
+  "texture": "none",
+  "corner_radius_tl": 24,
+  "corner_radius_tr": 24,
+  "corner_radius_bl": 24,
+  "corner_radius_br": 24,
+  "text_color": "#22543d",
+  "border": false,
+  "rounded": true,
+  "shadow": false,
+  "shadow_opacity": 0,
+  "texture_opacity": 0,
+  "min_contrast": 7.0,
+  "padding": 44,
+  "pattern": "dots",
+  "pattern_density": 1.1,
+  "pattern_opacity": 30,
+  "pattern_colors": [
+    "#22543d"
+  ],
+  "pattern_rotation": 0,
+  "pattern_jitter": 0.1,
+  "pattern_size_variance": 0.1
+}

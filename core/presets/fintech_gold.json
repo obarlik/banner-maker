@@ -1,0 +1,38 @@
+{
+  "name": "fintech_gold",
+  "design_score": {
+    "overall": 7.8,
+    "color_harmony": 8,
+    "typography": 8,
+    "composition": 7,
+    "professionalism": 9,
+    "originality": 8,
+    "target_fit": 8
+  },
+  "description": "Navy-gold theme for fintech, finance and corporate projects with trustworthy professional look.",
+  "bg_color_start": "#232526",
+  "bg_color_end": "#ffd700",
+  "gradient_type": "diagonal",
+  "texture": "metal",
+  "corner_radius_tl": 20,
+  "corner_radius_tr": 20,
+  "corner_radius_bl": 20,
+  "corner_radius_br": 20,
+  "text_color": "#232526",
+  "border": true,
+  "rounded": true,
+  "shadow": true,
+  "shadow_opacity": 100,
+  "texture_opacity": 30,
+  "min_contrast": 8.0,
+  "padding": 44,
+  "pattern": "lines",
+  "pattern_density": 1.0,
+  "pattern_opacity": 80,
+  "pattern_colors": [
+    "#ffd700"
+  ],
+  "pattern_rotation": 0,
+  "pattern_jitter": 0.0,
+  "pattern_size_variance": 0.0
+}

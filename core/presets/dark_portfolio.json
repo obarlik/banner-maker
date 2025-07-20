@@ -1,0 +1,51 @@
+{
+  "name": "dark_portfolio",
+  "design_score": {
+    "overall": 8.1,
+    "color_harmony": 8,
+    "typography": 8,
+    "composition": 8,
+    "professionalism": 9,
+    "originality": 8,
+    "target_fit": 8
+  },
+  "description": "Dark, elegant and modern theme for portfolio or blog projects.",
+  "bg_color_start": "#232526",
+  "bg_color_end": "#414345",
+  "gradient_type": "vertical",
+  "texture": "none",
+  "corner_radius_tl": 12,
+  "corner_radius_tr": 12,
+  "corner_radius_bl": 12,
+  "corner_radius_br": 12,
+  "shape": "ellipse",
+  "shape_color": [
+    80,
+    80,
+    120,
+    35
+  ],
+  "text_color": "#ffffff",
+  "border": false,
+  "rounded": true,
+  "shadow": true,
+  "shadow_opacity": 80,
+  "texture_opacity": 0,
+  "min_contrast": 8.0,
+  "padding": 40,
+  "pattern": "none",
+  "pattern_density": 1.0,
+  "pattern_opacity": 0,
+  "pattern_colors": null,
+  "pattern_rotation": 0,
+  "pattern_jitter": 0.0,
+  "pattern_size_variance": 0.0,
+  "overlay": "color",
+  "overlay_color": [
+    20,
+    20,
+    40,
+    45
+  ],
+  "shape_blur": 32
+}

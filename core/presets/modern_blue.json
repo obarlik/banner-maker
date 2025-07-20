@@ -1,0 +1,41 @@
+{
+  "name": "modern_blue",
+  "design_score": {
+    "overall": 8.5,
+    "color_harmony": 9,
+    "typography": 9,
+    "composition": 8,
+    "professionalism": 9,
+    "originality": 8,
+    "target_fit": 9
+  },
+  "bg_color_start": "#0052CC",
+  "bg_color_end": "#172B4D",
+  "gradient_type": "vertical",
+  "texture": "none",
+  "corner_radius_tl": 24,
+  "corner_radius_tr": 0,
+  "corner_radius_bl": 20,
+  "corner_radius_br": 0,
+  "shape": "wave",
+  "shape_color": [
+    100,
+    150,
+    255,
+    60
+  ],
+  "min_contrast": 7.8,
+  "shadow_opacity": 120,
+  "texture_opacity": 22,
+  "pattern": "lines",
+  "pattern_density": 1.0,
+  "pattern_opacity": 60,
+  "pattern_colors": [
+    "#fff"
+  ],
+  "pattern_rotation": 0,
+  "pattern_jitter": 0.0,
+  "pattern_size_variance": 0.0,
+  "overlay": "simple",
+  "overlay_opacity": 25
+}

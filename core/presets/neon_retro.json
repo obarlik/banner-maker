@@ -1,0 +1,58 @@
+{
+  "name": "neon_retro",
+  "design_score": {
+    "overall": 6.8,
+    "color_harmony": 7,
+    "typography": 7,
+    "composition": 6,
+    "professionalism": 6,
+    "originality": 8,
+    "target_fit": 7
+  },
+  "bg_color_start": "#fc00ff",
+  "bg_color_end": "#00dbde",
+  "gradient_type": "horizontal",
+  "texture": "dots",
+  "corner_radius_tl": 12,
+  "corner_radius_tr": 16,
+  "corner_radius_bl": 8,
+  "corner_radius_br": 40,
+  "min_contrast": 7.2,
+  "shadow_opacity": 80,
+  "texture_opacity": 22,
+  "pattern": "zigzag",
+  "pattern_density": 1.2,
+  "pattern_opacity": 80,
+  "pattern_colors": [
+    "#fff"
+  ],
+  "pattern_rotation": 0,
+  "pattern_jitter": 0.0,
+  "pattern_size_variance": 0.0,
+  "overlay": "gradient",
+  "overlay_color1": [
+    255,
+    255,
+    255,
+    0
+  ],
+  "overlay_color2": [
+    0,
+    0,
+    0,
+    120
+  ],
+  "overlay_direction": "diagonal",
+  "overlay_blur": 16,
+  "shape": "polygon",
+  "shape_color": [
+    255,
+    80,
+    80,
+    80
+  ],
+  "shape_sides": 6,
+  "shape_radius": 90,
+  "shape_rotation": 30,
+  "shape_blur": 24
+}

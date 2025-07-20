@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(git add:*)",
+      "Bash(python:*)",
+      "Bash(git commit:*)",
+      "Bash(mkdir:*)",
+      "Bash(rg:*)",
+      "Bash(sed:*)",
+      "Bash(rm:*)",
+      "Bash(mv:*)",
+      "Bash(ls:*)",
+      "Bash(dir:*)",
+      "Bash(test_dir=\"tests/motifs_20250715_133533\")",
+      "Bash(test_dir=\"tests/preset_review_$(date +%Y%m%d_%H%M%S)\")",
+      "Bash(echo:*)",
+      "Bash(test_dir=\"tests/preset_review_20250715_134858\")",
+      "Bash(for file in *.json)",
+      "Bash(do sed -i 's/,\\s*,/,/g' \"$file\")",
+      "Bash(done)",
+      "Bash(do echo -n \"$file: \")",
+      "Bash(/dev/null)",
+      "Bash(do sed -i '/^\\s*,\\s*$/d' \"$file\")",
+      "Bash(do echo \"=== $file ===\")",
+      "Bash(cp:*)",
+      "Bash(git mv:*)",
+      "Bash(do sed -i 's/\"\"motif\"\"/\"\"pattern\"\"/g; s/\"\"motif_density\"\"/\"\"pattern_density\"\"/g; s/\"\"motif_opacity\"\"/\"\"pattern_opacity\"\"/g; s/\"\"motif_colors\"\"/\"\"pattern_colors\"\"/g; s/\"\"motif_rotation\"\"/\"\"pattern_rotation\"\"/g; s/\"\"motif_jitter\"\"/\"\"pattern_jitter\"\"/g; s/\"\"motif_size_variance\"\"/\"\"pattern_size_variance\"\"/g' \"$file\")",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:openfontlicense.org)",
+      "WebFetch(domain:raw.githubusercontent.com)"
+    ],
+    "deny": []
+  }
+}

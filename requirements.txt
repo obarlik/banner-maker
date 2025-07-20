@@ -1,0 +1,8 @@
+# Core dependencies
+pillow>=9.0.0
+numpy>=1.20.0
+
+# Optional dependencies for advanced textures
+# Install with: pip install scipy matplotlib
+# scipy>=1.7.0
+# matplotlib>=3.3.0 

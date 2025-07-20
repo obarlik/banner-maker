@@ -1,0 +1,87 @@
+{
+  "name": "layered_shapes",
+  "design_score": {
+    "overall": 7.2,
+    "color_harmony": 7,
+    "typography": 7,
+    "composition": 7,
+    "professionalism": 7,
+    "originality": 8,
+    "target_fit": 7
+  },
+  "description": "Multiple overlapping shapes creating rich decorative layers.",
+  "bg_color_start": "#1a1a2e",
+  "bg_color_end": "#16213e",
+  "gradient_type": "diagonal",
+  "texture": "none",
+  "corner_radius_tl": 16,
+  "corner_radius_tr": 16,
+  "corner_radius_bl": 16,
+  "corner_radius_br": 16,
+  "text_color": "#ffffff",
+  "border": false,
+  "rounded": true,
+  "shadow": true,
+  "shadow_opacity": 70,
+  "texture_opacity": 0,
+  "min_contrast": 7.0,
+  "padding": 40,
+  "pattern": "dots",
+  "pattern_density": 0.6,
+  "pattern_opacity": 30,
+  "pattern_colors": [
+    "#4facfe"
+  ],
+  "pattern_rotation": 0,
+  "pattern_jitter": 0.2,
+  "pattern_size_variance": 0.3,
+  "shapes": [
+    {
+      "type": "ellipse",
+      "color": [
+        79,
+        172,
+        254,
+        60
+      ],
+      "center": [
+        200,
+        128
+      ],
+      "rx": 150,
+      "ry": 80,
+      "blur": 15
+    },
+    {
+      "type": "polygon",
+      "color": [
+        255,
+        107,
+        107,
+        50
+      ],
+      "center": [
+        700,
+        100
+      ],
+      "radius": 120,
+      "sides": 6,
+      "rotation": 30,
+      "blur": 12
+    },
+    {
+      "type": "wave",
+      "color": [
+        78,
+        205,
+        196,
+        70
+      ],
+      "amplitude": 0.25,
+      "frequency": 2,
+      "blur": 18
+    }
+  ],
+  "overlay": "simple",
+  "overlay_opacity": 25
+}

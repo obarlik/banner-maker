@@ -1,0 +1,61 @@
+{
+  "name": "diagonal_stripes",
+  "design_score": {
+    "overall": 8.0,
+    "color_harmony": 8,
+    "typography": 8,
+    "composition": 8,
+    "professionalism": 8,
+    "originality": 8,
+    "target_fit": 8
+  },
+  "description": "Dynamic diagonal bars with layered stripe effects and energy.",
+  "bg_color_start": "#ff6b6b",
+  "bg_color_end": "#4ecdc4",
+  "gradient_type": "diagonal",
+  "texture": "lines",
+  "corner_radius_tl": 12,
+  "corner_radius_tr": 12,
+  "corner_radius_bl": 12,
+  "corner_radius_br": 12,
+  "text_color": "#ffffff",
+  "border": true,
+  "rounded": true,
+  "shadow": true,
+  "shadow_opacity": 70,
+  "texture_opacity": 20,
+  "min_contrast": 6.8,
+  "padding": 38,
+  "pattern": "lines",
+  "pattern_density": 1.0,
+  "pattern_opacity": 30,
+  "pattern_colors": [
+    "#ffffff"
+  ],
+  "pattern_rotation": 45,
+  "pattern_jitter": 0.0,
+  "pattern_size_variance": 0.0,
+  "shape": "diagonal_bar",
+  "shape_color": [
+    255,
+    255,
+    255,
+    60
+  ],
+  "shape_thickness": 0.3,
+  "shape_angle": 45,
+  "shape_blur": 10,
+  "overlay": "gradient",
+  "overlay_color1": [
+    255,
+    255,
+    255,
+    0
+  ],
+  "overlay_color2": [
+    255,
+    255,
+    255,
+    40
+  ]
+}

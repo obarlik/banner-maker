@@ -1,0 +1,52 @@
+{
+  "name": "nature_breeze",
+  "design_score": {
+    "overall": 7.5,
+    "color_harmony": 8,
+    "typography": 7,
+    "composition": 7,
+    "professionalism": 7,
+    "originality": 8,
+    "target_fit": 8
+  },
+  "bg_color_start": "#a8ffce",
+  "bg_color_end": "#faffd1",
+  "gradient_type": "vertical",
+  "texture": "lines",
+  "corner_radius_tl": 16,
+  "corner_radius_tr": 32,
+  "corner_radius_bl": 16,
+  "corner_radius_br": 32,
+  "shape": "wave",
+  "shape_color": [
+    34,
+    139,
+    34,
+    55
+  ],
+  "text_color": "#22543d",
+  "border": false,
+  "texture_density": 1.17,
+  "jitter": 0.18,
+  "size_variance": 0.32,
+  "opacity": 22,
+  "text_box": true,
+  "text_box_color": "#00000088",
+  "text_box_padding": 8,
+  "auto_color": false,
+  "title_font": "Inter-Bold",
+  "subtitle_font": "Inter-Regular",
+  "icon_outline": true,
+  "theme": "modern",
+  "pattern": "lines",
+  "pattern_density": 1.0,
+  "pattern_opacity": 30,
+  "pattern_colors": [
+    "#22543d"
+  ],
+  "pattern_rotation": 0,
+  "pattern_jitter": 0.0,
+  "pattern_size_variance": 0.0,
+  "overlay": "simple",
+  "overlay_opacity": 20
+}

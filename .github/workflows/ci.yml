@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ['3.8', '3.11', '3.12']  # Test oldest supported, current stable, and latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Test CLI help
+      run: python banner_maker.py --help
+    
+    - name: Test basic banner generation
+      run: |
+        python banner_maker.py --title "Banner Maker" --subtitle "Cross-platform Python banner generator" --bg "blue:purple:diagonal" --pattern "dots:white:25" --texture "grain:15" --text "auto:true" --output banner-${{ matrix.os }}-py${{ matrix.python-version }}.png
+    
+    - name: Test preset usage
+      run: |
+        python banner_maker.py --preset modern_blue --title "Preset Test"
+    
+    - name: Verify output files were created (Unix)
+      if: runner.os != 'Windows'
+      run: ls -la *.png
+    
+    - name: Verify output files were created (Windows)
+      if: runner.os == 'Windows'
+      run: dir *.png
+    
+    - name: Upload test banner (viewable PNG)
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: ${{ matrix.os }}-python${{ matrix.python-version }}-banner
+        path: banner-${{ matrix.os }}-py${{ matrix.python-version }}.png
+        retention-days: 3 

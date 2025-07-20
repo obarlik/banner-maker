@@ -1,0 +1,39 @@
+{
+  "name": "architect_concrete",
+  "design_score": {
+    "overall": 8.0,
+    "color_harmony": 8,
+    "typography": 8,
+    "composition": 8,
+    "professionalism": 9,
+    "originality": 7,
+    "target_fit": 8
+  },
+  "description": "Concrete texture and minimalist design for architecture and construction projects.",
+  "bg_color_start": "#2c3e50",
+  "bg_color_end": "#95a5a6",
+  "gradient_type": "diagonal",
+  "texture": "concrete",
+  "corner_radius_tl": 12,
+  "corner_radius_tr": 12,
+  "corner_radius_bl": 12,
+  "corner_radius_br": 12,
+  "text_color": "#ffffff",
+  "border": true,
+  "rounded": true,
+  "shadow": true,
+  "shadow_opacity": 70,
+  "texture_opacity": 40,
+  "min_contrast": 6.0,
+  "padding": 36,
+  "pattern": "squares",
+  "pattern_density": 0.8,
+  "pattern_opacity": 25,
+  "pattern_colors": [
+    "#34495e"
+  ],
+  "pattern_rotation": 45,
+  "pattern_tilt": 45,
+  "pattern_jitter": 0.2,
+  "pattern_size_variance": 0.3
+}

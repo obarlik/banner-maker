@@ -1,0 +1,61 @@
+{
+  "name": "wave_dynamics",
+  "design_score": {
+    "overall": 7.8,
+    "color_harmony": 8,
+    "typography": 8,
+    "composition": 8,
+    "professionalism": 8,
+    "originality": 8,
+    "target_fit": 8
+  },
+  "description": "Dynamic wave shapes with flowing gradients and motion effects.",
+  "bg_color_start": "#667eea",
+  "bg_color_end": "#764ba2",
+  "gradient_type": "vertical",
+  "texture": "none",
+  "corner_radius_tl": 16,
+  "corner_radius_tr": 16,
+  "corner_radius_bl": 16,
+  "corner_radius_br": 16,
+  "text_color": "#ffffff",
+  "border": false,
+  "rounded": true,
+  "shadow": true,
+  "shadow_opacity": 60,
+  "texture_opacity": 0,
+  "min_contrast": 6.5,
+  "padding": 40,
+  "pattern": "lines",
+  "pattern_density": 0.8,
+  "pattern_opacity": 40,
+  "pattern_colors": [
+    "#ffffff"
+  ],
+  "pattern_rotation": 15,
+  "pattern_jitter": 0.1,
+  "pattern_size_variance": 0.2,
+  "shape": "wave",
+  "shape_color": [
+    200,
+    220,
+    255,
+    80
+  ],
+  "shape_amplitude": 0.3,
+  "shape_frequency": 3,
+  "shape_blur": 12,
+  "overlay": "gradient",
+  "overlay_color1": [
+    255,
+    255,
+    255,
+    0
+  ],
+  "overlay_color2": [
+    255,
+    255,
+    255,
+    30
+  ]
+}

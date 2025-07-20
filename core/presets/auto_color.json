@@ -1,0 +1,55 @@
+{
+  "name": "auto_color",
+  "design_score": {
+    "overall": 8.3,
+    "color_harmony": 8,
+    "typography": 9,
+    "composition": 8,
+    "professionalism": 8,
+    "originality": 8,
+    "target_fit": 9
+  },
+  "auto_color": true,
+  "gradient_type": "vertical",
+  "texture": "none",
+  "corner_radius_tl": 24,
+  "corner_radius_tr": 24,
+  "corner_radius_bl": 24,
+  "corner_radius_br": 24,
+  "text_color": "#FFFFFF",
+  "border": true,
+  "rounded": true,
+  "shadow": true,
+  "shadow_opacity": 100,
+  "icon_position": "right",
+  "min_contrast": 7.0,
+  "texture_opacity": 0,
+  "texture_density": 1.0,
+  "padding": 48,
+  "pattern": "none",
+  "pattern_density": 1.0,
+  "pattern_opacity": 0,
+  "pattern_colors": null,
+  "pattern_rotation": 0,
+  "pattern_jitter": 0.0,
+  "pattern_size_variance": 0.0,
+  "overlay": "lens_flare",
+  "overlay_center": [
+    800,
+    80
+  ],
+  "shape": "ellipse",
+  "shape_color": [
+    120,
+    120,
+    255,
+    50
+  ],
+  "shape_center": [
+    512,
+    128
+  ],
+  "shape_rx": 220,
+  "shape_ry": 80,
+  "shape_blur": 32
+}

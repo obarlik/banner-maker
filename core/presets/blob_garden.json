@@ -1,0 +1,95 @@
+{
+  "name": "blob_garden",
+  "design_score": {
+    "overall": 7.5,
+    "color_harmony": 8,
+    "typography": 7,
+    "composition": 7,
+    "professionalism": 7,
+    "originality": 8,
+    "target_fit": 8
+  },
+  "description": "Organic blobs of various sizes creating natural garden patterns.",
+  "bg_color_start": "#ff9a9e",
+  "bg_color_end": "#fecfef",
+  "gradient_type": "radial",
+  "texture": "grain",
+  "corner_radius_tl": 32,
+  "corner_radius_tr": 32,
+  "corner_radius_bl": 32,
+  "corner_radius_br": 32,
+  "text_color": "#2d3748",
+  "border": false,
+  "rounded": true,
+  "shadow": true,
+  "shadow_opacity": 50,
+  "texture_opacity": 12,
+  "min_contrast": 6.0,
+  "padding": 44,
+  "pattern": "circles",
+  "pattern_density": 0.3,
+  "pattern_opacity": 20,
+  "pattern_colors": [
+    "#ffffff"
+  ],
+  "pattern_rotation": 0,
+  "pattern_jitter": 0.4,
+  "pattern_size_variance": 0.6,
+  "shapes": [
+    {
+      "type": "blob",
+      "color": [
+        255,
+        255,
+        255,
+        80
+      ],
+      "seed": 42,
+      "scale": 1.2,
+      "blur": 20
+    },
+    {
+      "type": "blob",
+      "color": [
+        255,
+        255,
+        255,
+        60
+      ],
+      "seed": 123,
+      "scale": 0.8,
+      "blur": 25
+    },
+    {
+      "type": "blob",
+      "color": [
+        255,
+        255,
+        255,
+        70
+      ],
+      "seed": 456,
+      "scale": 1.5,
+      "blur": 18
+    },
+    {
+      "type": "blob",
+      "color": [
+        255,
+        255,
+        255,
+        50
+      ],
+      "seed": 789,
+      "scale": 0.6,
+      "blur": 30
+    }
+  ],
+  "overlay": "color",
+  "overlay_color": [
+    255,
+    255,
+    255,
+    10
+  ]
+}

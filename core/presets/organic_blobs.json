@@ -1,0 +1,55 @@
+{
+  "name": "organic_blobs",
+  "design_score": {
+    "overall": 7.3,
+    "color_harmony": 7,
+    "typography": 7,
+    "composition": 7,
+    "professionalism": 7,
+    "originality": 8,
+    "target_fit": 7
+  },
+  "description": "Organic blob shapes with natural curves and fluid aesthetics.",
+  "bg_color_start": "#ff9a9e",
+  "bg_color_end": "#fecfef",
+  "gradient_type": "radial",
+  "texture": "grain",
+  "corner_radius_tl": 32,
+  "corner_radius_tr": 32,
+  "corner_radius_bl": 32,
+  "corner_radius_br": 32,
+  "text_color": "#2d3748",
+  "border": false,
+  "rounded": true,
+  "shadow": true,
+  "shadow_opacity": 50,
+  "texture_opacity": 15,
+  "min_contrast": 6.0,
+  "padding": 44,
+  "pattern": "circles",
+  "pattern_density": 0.5,
+  "pattern_opacity": 20,
+  "pattern_colors": [
+    "#ffffff"
+  ],
+  "pattern_rotation": 0,
+  "pattern_jitter": 0.3,
+  "pattern_size_variance": 0.5,
+  "shape": "blob",
+  "shape_color": [
+    255,
+    255,
+    255,
+    85
+  ],
+  "shape_seed": 123,
+  "shape_scale": 1.2,
+  "shape_blur": 18,
+  "overlay": "color",
+  "overlay_color": [
+    255,
+    255,
+    255,
+    15
+  ]
+}

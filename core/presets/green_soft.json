@@ -1,0 +1,32 @@
+{
+  "name": "green_soft",
+  "design_score": {
+    "overall": 7.6,
+    "color_harmony": 8,
+    "typography": 7,
+    "composition": 7,
+    "professionalism": 8,
+    "originality": 7,
+    "target_fit": 8
+  },
+  "bg_color_start": "#43cea2",
+  "bg_color_end": "#185a9d",
+  "gradient_type": "radial",
+  "texture": "none",
+  "corner_radius_tl": 16,
+  "corner_radius_tr": 24,
+  "corner_radius_bl": 8,
+  "corner_radius_br": 16,
+  "min_contrast": 6.7,
+  "shadow_opacity": 120,
+  "texture_opacity": 11,
+  "pattern": "dots",
+  "pattern_density": 1.3,
+  "pattern_opacity": 40,
+  "pattern_colors": [
+    "#fff"
+  ],
+  "pattern_rotation": 0,
+  "pattern_jitter": 0.1,
+  "pattern_size_variance": 0.2
+}

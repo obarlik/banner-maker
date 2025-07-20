@@ -1,0 +1,78 @@
+{
+  "name": "diagonal_stripes_v2",
+  "design_score": {
+    "overall": 7.6,
+    "color_harmony": 7,
+    "typography": 8,
+    "composition": 7,
+    "professionalism": 8,
+    "originality": 8,
+    "target_fit": 8
+  },
+  "description": "Multiple diagonal bars creating complex stripe patterns.",
+  "bg_color_start": "#ff6b6b",
+  "bg_color_end": "#4ecdc4",
+  "gradient_type": "diagonal",
+  "texture": "lines",
+  "corner_radius_tl": 16,
+  "corner_radius_tr": 16,
+  "corner_radius_bl": 16,
+  "corner_radius_br": 16,
+  "text_color": "#ffffff",
+  "border": false,
+  "rounded": true,
+  "shadow": true,
+  "shadow_opacity": 70,
+  "texture_opacity": 18,
+  "min_contrast": 6.8,
+  "padding": 38,
+  "pattern": "lines",
+  "pattern_density": 0.8,
+  "pattern_opacity": 30,
+  "pattern_colors": [
+    "#ffffff"
+  ],
+  "pattern_rotation": 45,
+  "pattern_jitter": 0.0,
+  "pattern_size_variance": 0.0,
+  "shapes": [
+    {
+      "type": "diagonal_bar",
+      "color": [
+        255,
+        255,
+        255,
+        80
+      ],
+      "thickness": 0.15,
+      "angle": 30,
+      "blur": 6
+    },
+    {
+      "type": "diagonal_bar",
+      "color": [
+        255,
+        255,
+        255,
+        60
+      ],
+      "thickness": 0.08,
+      "angle": 60,
+      "blur": 8
+    },
+    {
+      "type": "diagonal_bar",
+      "color": [
+        255,
+        255,
+        255,
+        70
+      ],
+      "thickness": 0.12,
+      "angle": 0,
+      "blur": 10
+    }
+  ],
+  "overlay": "simple",
+  "overlay_opacity": 25
+}

@@ -1,0 +1,125 @@
+{
+  "name": "polygon_constellation",
+  "design_score": {
+    "overall": 7.2,
+    "color_harmony": 7,
+    "typography": 7,
+    "composition": 7,
+    "professionalism": 7,
+    "originality": 8,
+    "target_fit": 7
+  },
+  "description": "Multiple polygons creating constellation-like geometric patterns.",
+  "bg_color_start": "#141e30",
+  "bg_color_end": "#243b55",
+  "gradient_type": "radial",
+  "texture": "none",
+  "corner_radius_tl": 12,
+  "corner_radius_tr": 12,
+  "corner_radius_bl": 12,
+  "corner_radius_br": 12,
+  "text_color": "#ffffff",
+  "border": false,
+  "rounded": true,
+  "shadow": true,
+  "shadow_opacity": 80,
+  "texture_opacity": 0,
+  "min_contrast": 7.0,
+  "padding": 40,
+  "pattern": "stars",
+  "pattern_density": 0.4,
+  "pattern_opacity": 30,
+  "pattern_colors": [
+    "#4facfe"
+  ],
+  "pattern_rotation": 0,
+  "pattern_tilt": [
+    0,
+    360
+  ],
+  "pattern_jitter": 0.3,
+  "pattern_size_variance": 0.5,
+  "shapes": [
+    {
+      "type": "polygon",
+      "color": [
+        79,
+        172,
+        254,
+        85
+      ],
+      "center": [
+        200,
+        80
+      ],
+      "radius": 60,
+      "sides": 6,
+      "rotation": 0,
+      "blur": 8
+    },
+    {
+      "type": "polygon",
+      "color": [
+        79,
+        172,
+        254,
+        70
+      ],
+      "center": [
+        400,
+        180
+      ],
+      "radius": 45,
+      "sides": 5,
+      "rotation": 36,
+      "blur": 10
+    },
+    {
+      "type": "polygon",
+      "color": [
+        79,
+        172,
+        254,
+        60
+      ],
+      "center": [
+        700,
+        100
+      ],
+      "radius": 75,
+      "sides": 8,
+      "rotation": 22,
+      "blur": 12
+    },
+    {
+      "type": "polygon",
+      "color": [
+        79,
+        172,
+        254,
+        55
+      ],
+      "center": [
+        850,
+        200
+      ],
+      "radius": 35,
+      "sides": 3,
+      "rotation": 60,
+      "blur": 6
+    }
+  ],
+  "overlay": "gradient",
+  "overlay_color1": [
+    255,
+    255,
+    255,
+    0
+  ],
+  "overlay_color2": [
+    255,
+    255,
+    255,
+    15
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "name": "geometric_polygons",
+  "design_score": {
+    "overall": 7.4,
+    "color_harmony": 7,
+    "typography": 7,
+    "composition": 7,
+    "professionalism": 8,
+    "originality": 8,
+    "target_fit": 7
+  },
+  "description": "Sharp polygon shapes with geometric patterns and modern aesthetics.",
+  "bg_color_start": "#141e30",
+  "bg_color_end": "#243b55",
+  "gradient_type": "radial",
+  "texture": "none",
+  "corner_radius_tl": 8,
+  "corner_radius_tr": 8,
+  "corner_radius_bl": 8,
+  "corner_radius_br": 8,
+  "text_color": "#ffffff",
+  "border": true,
+  "rounded": true,
+  "shadow": true,
+  "shadow_opacity": 80,
+  "texture_opacity": 0,
+  "min_contrast": 7.0,
+  "padding": 36,
+  "pattern": "triangles",
+  "pattern_density": 0.6,
+  "pattern_opacity": 35,
+  "pattern_colors": [
+    "#4facfe"
+  ],
+  "pattern_rotation": 30,
+  "pattern_tilt": [
+    -45,
+    45
+  ],
+  "pattern_jitter": 0.2,
+  "pattern_size_variance": 0.4,
+  "shape": "polygon",
+  "shape_color": [
+    79,
+    172,
+    254,
+    100
+  ],
+  "shape_center": [
+    400,
+    128
+  ],
+  "shape_radius": 180,
+  "shape_sides": 6,
+  "shape_rotation": 0,
+  "shape_blur": 8,
+  "overlay": "simple",
+  "overlay_opacity": 20
+}

@@ -1,0 +1,37 @@
+{
+  "name": "sunset_stream_v2",
+  "design_score": {
+    "overall": 7.7,
+    "color_harmony": 8,
+    "typography": 8,
+    "composition": 7,
+    "professionalism": 8,
+    "originality": 8,
+    "target_fit": 8
+  },
+  "bg_color_start": "#ffb347",
+  "bg_color_end": "#ff5e62",
+  "gradient_type": "diagonal",
+  "texture": "ascii_grid",
+  "corner_radius_tl": 14,
+  "corner_radius_tr": 20,
+  "corner_radius_bl": 24,
+  "corner_radius_br": 20,
+  "min_contrast": 6.3,
+  "shadow_opacity": 120,
+  "texture_opacity": 10,
+  "texture_density": 0.85,
+  "text_box": true,
+  "text_box_color": "#00000099",
+  "text_box_radius": 12,
+  "text_box_padding": 12,
+  "pattern": "ascii_grid",
+  "pattern_density": 1.0,
+  "pattern_opacity": 60,
+  "pattern_colors": [
+    "#fff"
+  ],
+  "pattern_rotation": 0,
+  "pattern_jitter": 0.0,
+  "pattern_size_variance": 0.0
+}

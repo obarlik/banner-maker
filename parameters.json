@@ -1,0 +1,194 @@
+[
+  {
+    "name": "title",
+    "type": "str",
+    "help": "Project title text",
+    "default": "Banner Maker",
+    "required": false,
+    "scope": "core"
+  },
+  {
+    "name": "subtitle", 
+    "type": "str",
+    "help": "Project subtitle/description text",
+    "default": "Customizable Project Banner Generator",
+    "required": false,
+    "scope": "core"
+  },
+  {
+    "name": "icon",
+    "type": "str", 
+    "help": "Path to icon image file",
+    "default": null,
+    "required": false,
+    "scope": "core"
+  },
+  {
+    "name": "output",
+    "type": "str",
+    "help": "Output file name",
+    "default": "github_banner.png",
+    "required": false,
+    "scope": "core"
+  },
+  {
+    "name": "preset",
+    "type": "str",
+    "help": "Use design preset (modern_blue, ocean_waves, etc.)",
+    "default": null,
+    "required": false,
+    "scope": "core"
+  },
+  {
+    "name": "bg",
+    "type": "str",
+    "help": "Background colors and gradient type",
+    "format": "start:end:type",
+    "examples": ["blue:purple:diagonal", "#ff0000:#00ff00:vertical", "red:orange:horizontal"],
+    "default": null,
+    "required": false,
+    "scope": "visual"
+  },
+  {
+    "name": "text",
+    "type": "str",
+    "help": "Text color and shadow",
+    "format": "color:shadow",
+    "examples": ["white:dark", "#ffffff:soft", "black:medium"],
+    "default": null,
+    "required": false,
+    "scope": "visual"
+  },
+  {
+    "name": "accent",
+    "type": "str",
+    "help": "Accent color (auto-applies to shapes, patterns, highlights)",
+    "format": "color",
+    "examples": ["blue", "#ff6b6b", "purple"],
+    "default": null,
+    "required": false,
+    "scope": "visual"
+  },
+  {
+    "name": "pattern",
+    "type": "str",
+    "help": "Background pattern/motif",
+    "format": "type:color:opacity",
+    "examples": ["dots:white:30", "lines:gray:20", "circles:blue:40"],
+    "default": null,
+    "required": false,
+    "scope": "element"
+  },
+  {
+    "name": "shape",
+    "type": "str",
+    "help": "Decorative shape element",
+    "format": "type:color:opacity",
+    "examples": ["wave:blue:60", "circle:accent:80", "ellipse:red:40"],
+    "default": null,
+    "required": false,
+    "scope": "element"
+  },
+  {
+    "name": "texture",
+    "type": "str",
+    "help": "Background texture",
+    "format": "type:opacity",
+    "examples": ["paper:20", "metal:30", "fabric:15"],
+    "default": null,
+    "required": false,
+    "scope": "element"
+  },
+  {
+    "name": "effect",
+    "type": "str",
+    "help": "Visual effect",
+    "format": "type:intensity",
+    "examples": ["glow:soft", "shadow:medium", "blur:light"],
+    "default": null,
+    "required": false,
+    "scope": "element"
+  },
+  {
+    "name": "rounded",
+    "type": "str",
+    "help": "Corner radius (0-50)",
+    "format": "radius",
+    "examples": ["20", "12", "0"],
+    "default": null,
+    "required": false,
+    "scope": "style"
+  },
+  {
+    "name": "padding",
+    "type": "str",
+    "help": "Internal spacing (20-60)",
+    "format": "pixels",
+    "examples": ["32", "20", "50"],
+    "default": null,
+    "required": false,
+    "scope": "style"
+  },
+  {
+    "name": "size",
+    "type": "str",
+    "help": "Overall size scale",
+    "format": "scale",
+    "examples": ["small", "medium", "large"],
+    "default": null,
+    "required": false,
+    "scope": "style"
+  },
+  {
+    "name": "intensity",
+    "type": "str",
+    "help": "Global intensity modifier (affects all opacity/contrast)",
+    "format": "level",
+    "examples": ["low", "medium", "high"],
+    "default": null,
+    "required": false,
+    "scope": "modifier"
+  },
+  {
+    "name": "contrast",
+    "type": "str",
+    "help": "Global contrast modifier",
+    "format": "level",
+    "examples": ["low", "medium", "high"],
+    "default": null,
+    "required": false,
+    "scope": "modifier"
+  },
+  {
+    "name": "demo",
+    "type": "bool",
+    "help": "Generate demo grid",
+    "default": false,
+    "required": false,
+    "scope": "system"
+  },
+  {
+    "name": "demo_set",
+    "type": "bool",
+    "help": "Generate demo banner set",
+    "default": false,
+    "required": false,
+    "scope": "system"
+  },
+  {
+    "name": "help_full",
+    "type": "bool",
+    "help": "Show detailed parameter documentation",
+    "default": false,
+    "required": false,
+    "scope": "system"
+  },
+  {
+    "name": "learn",
+    "type": "str",
+    "help": "Show CLI equivalent of preset",
+    "default": null,
+    "required": false,
+    "scope": "system"
+  }
+]

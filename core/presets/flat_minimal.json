@@ -1,0 +1,54 @@
+{
+  "name": "flat_minimal",
+  "design_score": {
+    "overall": 8.8,
+    "color_harmony": 9,
+    "typography": 9,
+    "composition": 9,
+    "professionalism": 9,
+    "originality": 8,
+    "target_fit": 9
+  },
+  "description": "Clean minimal design with subtle geometric accents for modern projects.",
+  "bg_color_start": "#2c3e50",
+  "bg_color_end": "#34495e",
+  "gradient_type": "vertical",
+  "texture": "none",
+  "corner_radius_tl": 12,
+  "corner_radius_tr": 12,
+  "corner_radius_bl": 12,
+  "corner_radius_br": 12,
+  "rounded": true,
+  "text_color": "#ecf0f1",
+  "min_contrast": 7.0,
+  "shadow": true,
+  "shadow_opacity": 60,
+  "texture_opacity": 0,
+  "pattern": "dots",
+  "pattern_density": 0.8,
+  "pattern_opacity": 25,
+  "pattern_colors": [
+    "#3498db"
+  ],
+  "pattern_rotation": 0,
+  "pattern_jitter": 0.0,
+  "pattern_size_variance": 0.0,
+  "shape": "ellipse",
+  "shape_color": [
+    52,
+    152,
+    219,
+    40
+  ],
+  "shape_center": [
+    700,
+    180
+  ],
+  "shape_radius": [
+    300,
+    150
+  ],
+  "overlay": "simple",
+  "overlay_opacity": 20,
+  "padding": 40
+}

@@ -1,0 +1,48 @@
+{
+  "name": "sunset_stream",
+  "design_score": {
+    "overall": 7.9,
+    "color_harmony": 8,
+    "typography": 8,
+    "composition": 8,
+    "professionalism": 8,
+    "originality": 8,
+    "target_fit": 8
+  },
+  "description": "Warm sunset gradient with flowing organic patterns for creative projects.",
+  "bg_color_start": "#ff7e5f",
+  "bg_color_end": "#feb47b",
+  "gradient_type": "diagonal",
+  "texture": "none",
+  "corner_radius_tl": 20,
+  "corner_radius_tr": 20,
+  "corner_radius_bl": 20,
+  "corner_radius_br": 20,
+  "rounded": true,
+  "text_color": "#ffffff",
+  "min_contrast": 7.0,
+  "shadow": true,
+  "shadow_opacity": 80,
+  "texture_opacity": 0,
+  "pattern": "sine",
+  "pattern_density": 0.8,
+  "pattern_opacity": 40,
+  "pattern_colors": [
+    "#ffffff"
+  ],
+  "pattern_rotation": 0,
+  "pattern_jitter": 0.0,
+  "pattern_size_variance": 0.0,
+  "shape": "wave",
+  "shape_color": [
+    255,
+    255,
+    255,
+    30
+  ],
+  "shape_amplitude": 0.15,
+  "shape_frequency": 2.5,
+  "overlay": "simple",
+  "overlay_opacity": 20,
+  "padding": 44
+}
