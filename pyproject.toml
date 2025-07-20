@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools>=45", "wheel", "setuptools_scm"]
+requires = ["setuptools>=45", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "banner-maker"
-dynamic = ["version"]
+version = "0.1.1"
 description = "Professional banner generation tool with modern CLI interface"
 readme = "README.md"
 license = {text = "MIT"}
@@ -49,5 +49,3 @@ include-package-data = true
 [tool.setuptools.package-data]
 "*" = ["*.json", "*.ttf", "*.txt"]
 
-[tool.setuptools_scm]
-write_to = "banner/_version.py"
