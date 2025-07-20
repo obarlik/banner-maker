@@ -4,12 +4,12 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "banner-maker"
-version = "0.1.1"
+version = "0.1.2"
 description = "Professional banner generation tool with modern CLI interface"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
-    {name = "Onur Barlik", email = "onurbarlik@gmail.com"}
+    {name = "Onur Barlik"}
 ]
 keywords = ["banner", "generator", "cli", "design", "graphics"]
 classifiers = [
@@ -40,7 +40,7 @@ Issues = "https://github.com/obarlik/banner-maker/issues"
 Documentation = "https://github.com/obarlik/banner-maker/blob/main/README.md"
 
 [project.scripts]
-banner-maker = "banner_maker:cli_main"
+banner-maker = "__init__:cli_main"
 
 [tool.setuptools]
 packages = ["banner", "core", "demo"]

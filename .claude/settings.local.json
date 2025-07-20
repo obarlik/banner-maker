@@ -34,7 +34,8 @@
       "Bash(git push:*)",
       "WebFetch(domain:docs.pypi.org)",
       "WebFetch(domain:pypi.org)",
-      "WebFetch(domain:packaging.python.org)"
+      "WebFetch(domain:packaging.python.org)",
+      "Bash(git tag:*)"
     ],
     "deny": []
   }
