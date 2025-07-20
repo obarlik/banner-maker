@@ -12,7 +12,20 @@ from banner.overlays import OVERLAY_MAP
 from banner.shapes import SHAPE_MAP
 from banner.patterns import PATTERN_MAP
 
-DEMO_DEFAULTS_JSON = os.path.join(os.path.dirname(__file__), '..', 'demo_defaults.json')
+# Try to find demo_defaults.json in different locations
+DEMO_DEFAULTS_JSON = None
+possible_paths = [
+    os.path.join(os.path.dirname(__file__), '..', 'demo_defaults.json'),  # Development
+    os.path.join(os.path.dirname(os.path.dirname(__file__)), 'demo_defaults.json'),  # Package
+]
+
+for path in possible_paths:
+    if os.path.exists(path):
+        DEMO_DEFAULTS_JSON = path
+        break
+        
+if DEMO_DEFAULTS_JSON is None:
+    raise FileNotFoundError("demo_defaults.json not found in expected locations")
 
 def load_demo_defaults():
     with open(DEMO_DEFAULTS_JSON, encoding='utf-8') as f:
