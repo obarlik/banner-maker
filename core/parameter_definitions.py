@@ -75,23 +75,25 @@ ELEMENT_PARAMETERS = {
     'pattern': {
         'type': str,
         'default': None,
-        'help': 'Background pattern/motif',
-        'format': 'type:color:opacity',
+        'help': 'Background pattern/motif with advanced controls',
+        'format': 'type:color:opacity:rotation:density:jitter',
         'examples': [
             'dots:white:30',
-            'lines:gray:20',
-            'circles:blue:40'
+            'dots:white:100:45:1.5:0.3',
+            'lines:gray:80:0:1.0:0.1',
+            'triangles:blue:60:30:0.8:0.2'
         ]
     },
     'shape': {
         'type': str,
         'default': None,
-        'help': 'Decorative shape element',
-        'format': 'type:color:opacity',
+        'help': 'Decorative shape element with parameters',
+        'format': 'type:color:opacity:param1:param2',
         'examples': [
             'wave:blue:60',
-            'circle:accent:80',
-            'ellipse:red:40'
+            'wave:blue:60:2.5:0.4',
+            'circle:red:80:50',
+            'ellipse:green:70:80:40'
         ]
     },
     'texture': {

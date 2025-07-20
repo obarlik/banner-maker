@@ -147,17 +147,37 @@ python banner_maker.py --preset cyber_yellow --title "Your Project"
 
 You can modify any preset by adding additional parameters. Here are visual examples showing how the same preset can be transformed:
 
-### Original Preset
-```bash
-python banner_maker.py --preset modern_blue --title "Original Preset"
-```
-![Original](customization/modern_blue_original.png)
+### Accent Color Effects
 
-### With Accent Color
+Accent colors automatically change patterns and shapes in any preset, giving you instant color variations:
+
 ```bash
-python banner_maker.py --preset modern_blue --title "With Red Accent" --accent "red"
+# Original vs Red accent
+python banner_maker.py --preset modern_blue --title "Original Preset"
+python banner_maker.py --preset modern_blue --title "Red Accent" --accent "red"
 ```
-![Red Accent](customization/modern_blue_red_accent.png)
+| Original | Red Accent |
+|----------|------------|
+| ![Original](customization/modern_blue_original.png) | ![Red Accent](customization/modern_blue_red_accent.png) |
+
+```bash
+# Multiple accent colors on same preset
+python banner_maker.py --preset modern_blue --title "Green" --accent "green"
+python banner_maker.py --preset modern_blue --title "Purple" --accent "purple"
+```
+| Green Accent | Purple Accent |
+|--------------|---------------|
+| ![Green](customization/modern_blue_green_accent.png) | ![Purple](customization/modern_blue_purple_accent.png) |
+
+#### Works with Any Preset
+```bash
+# Ocean waves vs Geometric chaos with accents
+python banner_maker.py --preset ocean_waves --title "Red Ocean" --accent "red"
+python banner_maker.py --preset geometric_chaos --title "Blue Chaos" --accent "blue"
+```
+| Ocean + Red | Chaos + Blue |
+|-------------|--------------|
+| ![Ocean Red](customization/ocean_waves_red_accent.png) | ![Chaos Blue](customization/geometric_chaos_blue_accent.png) |
 
 ### High Intensity
 ```bash
@@ -183,40 +203,198 @@ python banner_maker.py --preset modern_blue --title "Combined Effects" --accent 
 ```
 ![Combined Effects](customization/modern_blue_combined.png)
 
-### Common Customization Options
+### Advanced CLI Features
+
+Now that CLI supports all preset features, you can create complex designs directly:
 
 ```bash
-# Add accent color to any preset
-python banner_maker.py --preset PRESET_NAME --title "My Project" --accent "red"
+# Advanced pattern with rotation, density and jitter
+python banner_maker.py --title "Advanced Pattern" --pattern "dots:white:100:45:1.5:0.3"
 
-# Modify intensity (low/medium/high)
-python banner_maker.py --preset PRESET_NAME --title "My Project" --intensity "high"
+# Multi-shape combinations
+python banner_maker.py --title "Multi-Shape" --shape "wave:blue:60:2.5:0.4,circle:red:80:50,ellipse:green:70:80:40"
 
-# Add rounded corners (0-50)
-python banner_maker.py --preset PRESET_NAME --title "My Project" --rounded "25"
+# Complex wave with custom frequency and amplitude
+python banner_maker.py --title "Custom Wave" --shape "wave:accent:80:3.2:0.6" --accent "purple"
 
-# Add texture effects
-python banner_maker.py --preset PRESET_NAME --title "My Project" --texture "grain:20"
-
-# Combine multiple customizations
-python banner_maker.py --preset PRESET_NAME --title "My Project" --accent "purple" --rounded "15" --intensity "medium"
+# Advanced pattern combinations
+python banner_maker.py --title "Complex Design" --bg "blue:purple:diagonal" \
+    --pattern "triangles:white:60:30:0.8:0.2" --shape "wave:accent:70:2.0:0.3" \
+    --accent "orange" --rounded "25" --intensity "high"
 ```
 
-## Creating Your Own Presets
+### Quick Customization Reference
 
-Presets are JSON files located in `core/presets/`. Each preset defines:
-- Background colors and gradients
-- Pattern configurations
-- Shape elements
-- Texture effects
-- Visual effects
-- Typography settings
+| Parameter | Basic | Advanced |
+|-----------|-------|----------|
+| **Background** | `--bg "blue:purple:diagonal"` | Same |
+| **Pattern** | `--pattern "dots:white:30"` | `--pattern "dots:white:100:45:1.5:0.3"` |
+| **Shape** | `--shape "wave:blue:60"` | `--shape "wave:blue:60:2.5:0.4"` |
+| **Multi-Shape** | N/A | `--shape "wave:blue:60,circle:red:80"` |
+| **Accent** | `--accent "red"` | Same (auto-applies to all elements) |
+| **Modifiers** | `--intensity "high"` | Same |
 
-To create a custom preset:
-1. Copy an existing preset from `core/presets/`
-2. Modify the JSON configuration
-3. Save with a new name
-4. Use with `--preset your_preset_name`
+## Understanding Preset Architecture
+
+### How Presets Work
+
+Presets are JSON configuration files that define every visual aspect of a banner. They use a layered rendering system:
+
+1. **Background Layer** - Gradient colors and directions
+2. **Shape Layer** - Decorative geometric elements  
+3. **Pattern Layer** - Repeating motifs (dots, lines, triangles)
+4. **Texture Layer** - Surface effects (grain, paper, metal)
+5. **Text Layer** - Typography with auto-contrast
+6. **Effects Layer** - Shadows, glows, overlays
+
+### Preset JSON Structure
+
+```json
+{
+  "name": "preset_name",
+  "design_score": {
+    "overall": 8.5,
+    "color_harmony": 9,
+    "typography": 9,
+    "professionalism": 8
+  },
+  "bg_color_start": "#0052CC",
+  "bg_color_end": "#172B4D", 
+  "gradient_type": "vertical",
+  "text_color": "#ffffff",
+  "shadow": true,
+  "shadow_opacity": 120,
+  "pattern": "lines",
+  "pattern_colors": ["#fff"],
+  "pattern_opacity": 60,
+  "shape": "wave",
+  "shape_color": [100, 150, 255, 60],
+  "texture": "none",
+  "corner_radius_tl": 24,
+  "rounded": true
+}
+```
+
+### Parameter Categories
+
+**Core Background:**
+- `bg_color_start` / `bg_color_end` - Gradient colors
+- `gradient_type` - vertical, horizontal, diagonal, radial
+
+**Pattern System:**
+- `pattern` - Type: dots, lines, circles, triangles, etc.
+- `pattern_colors` - Array of hex colors
+- `pattern_opacity` - Transparency (0-255)
+- `pattern_density` - How dense the pattern is
+- `pattern_rotation` - Rotation angle in degrees
+
+**Shape System:**
+- `shape` - Type: wave, circle, ellipse, etc.
+- `shape_color` - RGBA array [r, g, b, alpha]
+- Complex shapes can have multiple elements in `shapes` array
+
+**Typography:**
+- `text_color` - Hex color for text
+- `shadow` - Boolean for text shadow
+- `shadow_opacity` - Shadow strength
+- `min_contrast` - Minimum contrast ratio for readability
+
+**Layout & Style:**
+- `corner_radius_*` - Individual corner rounding
+- `rounded` - Boolean for rounded corners
+- `padding` - Internal spacing
+- `border` - Boolean for border
+
+### Advanced Features
+
+**Multi-Shape Support:**
+```json
+"shapes": [
+  {
+    "type": "diagonal_bar",
+    "color": [255, 255, 255, 70],
+    "thickness": 0.2,
+    "angle": 30
+  },
+  {
+    "type": "ellipse", 
+    "color": [255, 255, 255, 50],
+    "center": [150, 180],
+    "rx": 100,
+    "ry": 60
+  }
+]
+```
+
+**Pattern Advanced Controls:**
+```json
+"pattern_rotation": 45,         // Rotation angle in degrees
+"pattern_density": 1.5,         // Pattern density multiplier
+"pattern_jitter": 0.3,          // Randomness in positioning (0.0-1.0)
+"pattern_size_variance": 0.4,   // Size variation
+"pattern_tilt": [0, 360]        // Random rotation range
+```
+
+**CLI Advanced Format:**
+
+*Pattern Parameters:*
+```bash
+# Basic: type:color:opacity
+--pattern "dots:white:30"
+
+# Advanced: type:color:opacity:rotation:density:jitter
+--pattern "dots:white:100:45:1.5:0.3"
+
+# Wave patterns: type:color:opacity:frequency:amplitude
+--pattern "sine:blue:100:3:20"
+```
+
+*Shape Parameters:*
+```bash
+# Basic: type:color:opacity
+--shape "wave:blue:60"
+
+# Wave with frequency and amplitude: type:color:opacity:frequency:amplitude
+--shape "wave:blue:60:2.5:0.4"
+
+# Circle with radius: type:color:opacity:radius
+--shape "circle:red:80:50"
+
+# Ellipse with rx and ry: type:color:opacity:rx:ry
+--shape "ellipse:green:70:80:40"
+
+# Multi-shape combinations (comma-separated)
+--shape "wave:blue:60:2.5:0.4,circle:red:80:50,ellipse:green:70:80:40"
+```
+
+**Design Scoring:**
+Each preset includes quality metrics for different use cases:
+- `overall` - General design quality
+- `color_harmony` - Color combination effectiveness  
+- `typography` - Text readability and style
+- `professionalism` - Business/corporate suitability
+- `originality` - Creative uniqueness
+- `target_fit` - Suitability for intended audience
+
+### Creating Your Own Presets
+
+1. **Start with a base:** Copy an existing preset from `core/presets/`
+2. **Modify systematically:** Change one layer at a time
+3. **Test with content:** Use real project titles/subtitles
+4. **Validate quality:** Ensure good contrast and readability
+5. **Save and use:** `--preset your_preset_name`
+
+**Example workflow:**
+```bash
+# Test your custom preset
+python banner_maker.py --preset my_custom --title "Test Title"
+
+# Learn CLI equivalent of existing preset
+python banner_maker.py --learn modern_blue
+
+# Generate variations
+python banner_maker.py --preset my_custom --accent "red" --intensity "high"
+```
 
 ## Technical Details
 

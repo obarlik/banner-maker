@@ -73,8 +73,9 @@ def parse_text_parameter(value):
 
 def parse_pattern_parameter(value):
     """
-    Parse pattern parameter: "type:color:opacity" or "type:color:opacity:freq:amp" for wave patterns
-    Examples: "dots:black:255", "stars_outline:gold:100", "sine:blue:100:3:20", "wave:red:80:2.5:15"
+    Parse pattern parameter: "type:color:opacity:rotation:density:jitter" 
+    Examples: "dots:black:255", "dots:white:100:45:1.5:0.3", "lines:blue:80:0:1.0:0.1"
+    Wave patterns: "sine:blue:100:3:20" (freq:amp instead of rotation:density)
     """
     if not value:
         return {}
@@ -108,7 +109,7 @@ def parse_pattern_parameter(value):
     else:
         result['pattern_opacity'] = 255
     
-    # Fourth and fifth parts are frequency and amplitude for wave patterns
+    # Wave patterns have different parameter structure
     wave_patterns = ['sine', 'wave', 'zigzag']
     if result.get('pattern') in wave_patterns:
         # Fourth part is frequency
@@ -126,13 +127,41 @@ def parse_pattern_parameter(value):
                 result['pattern_amp'] = max(5, min(50, amp))
             except ValueError:
                 pass  # Use default from pattern function
+    else:
+        # Regular patterns: rotation, density, jitter
+        # Fourth part is rotation
+        if len(parts) >= 4:
+            try:
+                rotation = float(parts[3])
+                result['pattern_rotation'] = rotation % 360
+            except ValueError:
+                result['pattern_rotation'] = 0
+        
+        # Fifth part is density
+        if len(parts) >= 5:
+            try:
+                density = float(parts[4])
+                result['pattern_density'] = max(0.1, min(3.0, density))
+            except ValueError:
+                result['pattern_density'] = 1.0
+        
+        # Sixth part is jitter
+        if len(parts) >= 6:
+            try:
+                jitter = float(parts[5])
+                result['pattern_jitter'] = max(0.0, min(1.0, jitter))
+            except ValueError:
+                result['pattern_jitter'] = 0.0
     
     return result
 
 def parse_shape_parameter(value):
     """
-    Parse shape parameter: "type:color:opacity"
-    Examples: "wave:blue:60", "circle:#ff0000:80", "ellipse:accent:40"
+    Parse shape parameter: "type:color:opacity:param1:param2"
+    Examples: "wave:blue:60:1.8:0.25", "circle:#ff0000:80:100:150", "ellipse:accent:40"
+    Wave: type:color:opacity:frequency:amplitude
+    Circle: type:color:opacity:center_x:center_y  
+    Ellipse: type:color:opacity:rx:ry
     """
     if not value:
         return {}
@@ -165,6 +194,46 @@ def parse_shape_parameter(value):
                 except ValueError:
                     opacity = 90
             result['shape_color'] = color_rgb + (opacity,)
+    
+    # Shape-specific parameters
+    shape_type = result.get('shape', 'none')
+    
+    if shape_type == 'wave':
+        # Fourth part is frequency
+        if len(parts) >= 4:
+            try:
+                freq = float(parts[3])
+                result['shape_frequency'] = max(0.5, min(5.0, freq))
+            except ValueError:
+                result['shape_frequency'] = 1.8
+        
+        # Fifth part is amplitude
+        if len(parts) >= 5:
+            try:
+                amp = float(parts[4])
+                result['shape_amplitude'] = max(0.1, min(1.0, amp))
+            except ValueError:
+                result['shape_amplitude'] = 0.25
+    
+    elif shape_type in ['circle', 'ellipse']:
+        # Fourth and fifth parts can be positioning or size
+        if len(parts) >= 4:
+            try:
+                param1 = float(parts[3])
+                if shape_type == 'circle':
+                    result['shape_radius'] = max(20, min(200, param1))
+                else:  # ellipse
+                    result['shape_rx'] = max(20, min(200, param1))
+            except ValueError:
+                pass
+        
+        if len(parts) >= 5:
+            try:
+                param2 = float(parts[4])
+                if shape_type == 'ellipse':
+                    result['shape_ry'] = max(20, min(200, param2))
+            except ValueError:
+                pass
     
     return result
 
@@ -264,20 +333,26 @@ def parse_compact_parameters(args):
     # Pattern (single or multiple)
     if hasattr(args, 'pattern') and args.pattern:
         if ',' in args.pattern:
-            # Multiple patterns - use first one for now
+            # Multiple patterns - create patterns array
             patterns = parse_multiple_values(args.pattern, parse_pattern_parameter)
             if patterns:
+                # Use first pattern for main config, store others in patterns array
                 config.update(patterns[0])
+                if len(patterns) > 1:
+                    config['multiple_patterns'] = patterns
         else:
             config.update(parse_pattern_parameter(args.pattern))
     
     # Shape (single or multiple)
     if hasattr(args, 'shape') and args.shape:
         if ',' in args.shape:
-            # Multiple shapes - use first one for now
+            # Multiple shapes - create shapes array similar to presets
             shapes = parse_multiple_values(args.shape, parse_shape_parameter)
             if shapes:
+                # Use first shape for main config, create shapes array for others
                 config.update(shapes[0])
+                if len(shapes) > 1:
+                    config['shapes'] = convert_shapes_to_preset_format(shapes)
         else:
             config.update(parse_shape_parameter(args.shape))
     
@@ -297,14 +372,13 @@ def apply_accent_color(config, accent_color):
     """
     accent_rgb = hex_to_rgb(parse_color_to_hex(accent_color))
     
-    # Apply to shape if using accent
-    if config.get('shape_use_accent'):
+    # Apply to shape (override existing if accent specified)
+    if 'shape' in config and config['shape'] != 'none':
         opacity = config.get('shape_color', (0, 0, 0, 90))[3] if 'shape_color' in config else 90
         config['shape_color'] = accent_rgb + (opacity,)
-        config.pop('shape_use_accent', None)
     
-    # Apply to pattern colors if not specified
-    if 'pattern' in config and config['pattern'] != 'none' and 'pattern_colors' not in config:
+    # Apply to pattern colors (override existing if accent specified)
+    if 'pattern' in config and config['pattern'] != 'none':
         config['pattern_colors'] = [parse_color_to_hex(accent_color)]
     
     return config
@@ -352,3 +426,42 @@ def apply_rounded_modifier(config, radius):
         pass
     
     return config
+
+def convert_shapes_to_preset_format(shapes):
+    """
+    Convert compact shape format to preset shapes array format.
+    """
+    preset_shapes = []
+    
+    for i, shape in enumerate(shapes):
+        if i == 0:
+            continue  # Skip first shape as it's already in main config
+        
+        shape_type = shape.get('shape', 'circle')
+        shape_color = shape.get('shape_color', (255, 255, 255, 60))
+        
+        # Convert to preset format
+        preset_shape = {
+            "type": shape_type,
+            "color": list(shape_color) if isinstance(shape_color, tuple) else shape_color
+        }
+        
+        # Add position variation for multiple shapes
+        if shape_type == "circle":
+            preset_shape["center"] = [200 + i * 150, 100 + i * 50]
+            preset_shape["radius"] = 80
+        elif shape_type == "ellipse":
+            preset_shape["center"] = [200 + i * 150, 100 + i * 50]
+            preset_shape["rx"] = 100
+            preset_shape["ry"] = 60
+        elif shape_type == "wave":
+            # Wave shapes use different positioning
+            preset_shape["amplitude"] = 0.25
+            preset_shape["frequency"] = 1.8 + i * 0.5
+        
+        # Add blur for layering effect
+        preset_shape["blur"] = 10 + i * 5
+        
+        preset_shapes.append(preset_shape)
+    
+    return preset_shapes
