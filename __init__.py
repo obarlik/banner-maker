@@ -4,5 +4,5 @@ try:
 except ImportError:
     from banner_maker import main, cli_main
 
-__version__ = "0.1.7"
+__version__ = "0.1.8"
 __author__ = "Onur Barlik"

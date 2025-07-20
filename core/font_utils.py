@@ -17,10 +17,23 @@ def find_font_path(font_name):
     if os.path.isfile(font_name):
         return font_name
     
-    # Check local fonts directory first
+    # Extract filename if full path provided
+    if '/' in font_name or '\\' in font_name:
+        font_name = os.path.basename(font_name)
+    
+    # Check local fonts directory first (development)
     local_font_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'fonts', font_name)
     if os.path.isfile(local_font_path):
         return local_font_path
+    
+    # Check package fonts directory (installed package)
+    try:
+        import pkg_resources
+        package_font_path = pkg_resources.resource_filename('', f'fonts/{font_name}')
+        if os.path.isfile(package_font_path):
+            return package_font_path
+    except (ImportError, FileNotFoundError):
+        pass
     
     # System font directories by platform
     system = platform.system().lower()
