@@ -14,7 +14,7 @@ from banner.pipeline import BannerConfig
 def create_new_argument_parser():
     """Create argument parser with new compact parameter system."""
     parser = argparse.ArgumentParser(
-        description='GitHub Banner Maker - Professional banner generation tool',
+        description='Banner Maker - Professional banner generation tool',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=get_parameter_short_help()
     )

@@ -1,6 +1,6 @@
 # banner_maker.py
 """
-GitHub Banner Maker - Main CLI Application
+Banner Maker - Main CLI Application
 Professional banner generation tool with modern CLI interface.
 """
 

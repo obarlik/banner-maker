@@ -18,9 +18,9 @@ from typing import Tuple
 @dataclass
 class BannerConfig:
     title: str = "Banner Maker"
-    subtitle: str = "Customizable Project Banner Generator"
+    subtitle: str = "Professional Banner Generation Tool"
     icon_path: str = None
-    output: str = "github_banner.png"
+    output: str = "banner.png"
     width: int = 1024
     height: int = 256
     bg_color_start: str = "#0052CC"

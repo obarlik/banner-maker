@@ -183,7 +183,7 @@ def get_parameter_help():
     """Generate comprehensive help text for all parameters."""
     help_text = []
     
-    help_text.append("GitHub Banner Maker - New CLI Parameter System")
+    help_text.append("Banner Maker - Professional Banner Generation Tool")
     help_text.append("=" * 50)
     help_text.append("")
     
