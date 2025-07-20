@@ -141,11 +141,17 @@ def add_text(img: Image.Image, config) -> Image.Image:
                 text_rgb = (255,255,255) if white_contrast > black_contrast else (32,32,32)
     else:
         text_rgb = hex_to_rgb(text_color) if isinstance(text_color, str) else text_color
-    # Auto-adjust font size
-    max_title_width = width - (icon_size + 3*min_icon_margin)
+    # Auto-adjust font size with improved algorithm
+    # Use smarter margin calculation - less aggressive spacing
+    margin_multiplier = 2.5 if min_icon_margin > 60 else 2.0  # Adaptive based on padding
+    max_title_width = width - (icon_size + margin_multiplier * min_icon_margin)
     max_block_height = int(height * 0.8)
     font_size = int(height * 0.25)
-    max_title_chars = 22
+    
+    # Dynamic character limit based on available width
+    base_chars_per_width = 0.04  # Approximately 40 chars for 1024px width
+    max_title_chars = max(15, int(max_title_width * base_chars_per_width))
+    
     while font_size > 10*SS:
         try:
             font_title = ImageFont.truetype(find_font_path(title_font), font_size)
@@ -157,20 +163,57 @@ def add_text(img: Image.Image, config) -> Image.Image:
                 font_title.size = font_size
         title_w = get_text_width(font_title, title)
         title_h = getattr(font_title, 'size', font_size)
-        subtitle_font_size = max(10*SS, int(font_size * 0.45))
+        
+        # Smart subtitle sizing - independent optimization
+        base_subtitle_size = max(10*SS, int(font_size * 0.45))
+        max_subtitle_size = max(12*SS, int(font_size * 0.65))  # Allow larger subtitle if space permits
+        
+        # Dynamic subtitle character limit based on available width
+        max_subtitle_chars = max(25, int(max_title_width * base_chars_per_width * 1.5))  # Allow more chars for subtitle
+        
+        # Find optimal subtitle size
+        subtitle_font_size = max_subtitle_size
+        while subtitle_font_size >= base_subtitle_size:
+            try:
+                font_subtitle = ImageFont.truetype(find_font_path(subtitle_font), subtitle_font_size)
+            except Exception as e:
+                print(f"[WARN] Subtitle font could not be loaded: {subtitle_font} ({e}), using default font.")
+                font_subtitle = ImageFont.load_default()
+                if not hasattr(font_subtitle, 'size'):
+                    font_subtitle.size = subtitle_font_size
+            
+            subtitle_w = get_text_width(font_subtitle, subtitle)
+            subtitle_h = getattr(font_subtitle, 'size', subtitle_font_size)
+            
+            # Check if subtitle fits well
+            subtitle_fits = subtitle_w < max_title_width and (len(subtitle) <= max_subtitle_chars or subtitle_font_size <= base_subtitle_size)
+            
+            if subtitle_fits:
+                break
+            subtitle_font_size -= 1*SS
+        
+        # Final subtitle sizing
         try:
             font_subtitle = ImageFont.truetype(find_font_path(subtitle_font), subtitle_font_size)
         except Exception as e:
-            print(f"[WARN] Subtitle font could not be loaded: {subtitle_font} ({e}), using default font.")
             font_subtitle = ImageFont.load_default()
             if not hasattr(font_subtitle, 'size'):
                 font_subtitle.size = subtitle_font_size
+        
         subtitle_w = get_text_width(font_subtitle, subtitle)
         subtitle_h = getattr(font_subtitle, 'size', subtitle_font_size)
         text_block_h = title_h + int(0.18*height) + subtitle_h
-        if title_w < max_title_width and text_block_h < max_block_height and len(title) <= max_title_chars:
+        
+        # More lenient fitting criteria - prioritize readability over strict constraints
+        width_fits = title_w < max_title_width and subtitle_w < max_title_width
+        height_fits = text_block_h < max_block_height
+        char_reasonable = len(title) <= max_title_chars or font_size < int(height * 0.15)  # Allow smaller fonts for very long text
+        
+        if width_fits and height_fits and char_reasonable:
             break
-        font_size -= 2*SS
+        
+        # Smaller reduction step for finer control
+        font_size -= 1*SS
     # Position calculations
     title_w, title_h = get_text_width(font_title, title), getattr(font_title, 'size', font_size)
     subtitle_w, subtitle_h = get_text_width(font_subtitle, subtitle), getattr(font_subtitle, 'size', subtitle_font_size)
