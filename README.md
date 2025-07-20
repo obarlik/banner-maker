@@ -1,8 +1,8 @@
-# GitHub Banner Maker
+# Banner Maker
 
-![GitHub Banner Maker](readme_banner.png)
+![Banner Maker](readme_banner.png)
 
-A powerful, customizable Python tool to generate modern banners for your GitHub projects. Create professional-looking banners with custom titles, subtitles, icons, colors, gradients, patterns, shapes, textures, and effects.
+A powerful, customizable Python tool to generate modern banners for your projects. Create professional-looking banners with custom titles, subtitles, icons, colors, gradients, patterns, shapes, textures, and effects.
 
 **Developed by [obarlik](https://github.com/obarlik) at [Codechu](https://codechu.com)**
 
@@ -63,7 +63,7 @@ python banner_maker.py \
 - `--title` - Project title (default: "Banner Maker")
 - `--subtitle` - Project subtitle/slogan (default: "Customizable Project Banner Generator")
 - `--icon` - Path to icon image (optional)
-- `--output` - Output file name (default: "github_banner.png")
+- `--output` - Output file name (default: "banner.png")
 
 ### Colors & Gradients
 - `--bg-color-start` - Background gradient start color (hex)
