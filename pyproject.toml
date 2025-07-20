@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "banner-maker"
-version = "0.1.10"
+version = "0.1.11"
 description = "Professional banner generation tool with modern CLI interface"
 readme = "README.md"
 license = {text = "MIT"}
@@ -43,7 +43,7 @@ Documentation = "https://github.com/obarlik/banner-maker/blob/main/README.md"
 banner-maker = "banner_maker:cli_main"
 
 [tool.setuptools]
-packages = ["banner", "core", "demo"]
+packages = ["banner", "core", "demo", "fonts"]
 py-modules = ["banner_maker"]
 include-package-data = true
 
