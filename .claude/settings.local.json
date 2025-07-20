@@ -31,7 +31,10 @@
       "WebFetch(domain:openfontlicense.org)",
       "WebFetch(domain:raw.githubusercontent.com)",
       "Bash(cat:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "WebFetch(domain:docs.pypi.org)",
+      "WebFetch(domain:pypi.org)",
+      "WebFetch(domain:packaging.python.org)"
     ],
     "deny": []
   }
