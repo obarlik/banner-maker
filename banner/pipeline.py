@@ -29,8 +29,8 @@ class BannerConfig:
     icon_bg_color: str = None
     title_font_size: int = None
     subtitle_font_size: int = None
-    title_font: str = "Inter-Bold.ttf"
-    subtitle_font: str = "Inter-Regular.ttf"
+    title_font: str = "DejaVuSansMono-Bold.ttf"
+    subtitle_font: str = "DejaVuSansMono.ttf"
     icon_size: int = 120
     icon_position: str = "right"
     shadow: bool = False

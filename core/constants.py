@@ -42,8 +42,8 @@ OPACITY_MODERATE = 128
 OPACITY_STRONG = 192
 
 # === FONT SETTINGS ===
-DEFAULT_TITLE_FONT = "Inter-Bold.ttf"
-DEFAULT_SUBTITLE_FONT = "Inter-Regular.ttf"
+DEFAULT_TITLE_FONT = "DejaVuSansMono-Bold.ttf"
+DEFAULT_SUBTITLE_FONT = "DejaVuSansMono.ttf"
 
 # Font size limits
 MIN_FONT_SIZE = 8

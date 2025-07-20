@@ -28,11 +28,30 @@ def find_font_path(font_name):
     
     # Check package fonts directory (installed package)
     try:
-        import pkg_resources
-        package_font_path = pkg_resources.resource_filename('', f'fonts/{font_name}')
-        if os.path.isfile(package_font_path):
-            return package_font_path
-    except (ImportError, FileNotFoundError):
+        # Try importlib.resources first (Python 3.9+)
+        try:
+            from importlib import resources
+            with resources.path('fonts', font_name) as font_path:
+                if font_path.exists():
+                    return str(font_path)
+        except (ImportError, AttributeError):
+            # Fallback to pkg_resources
+            import pkg_resources
+            package_font_path = pkg_resources.resource_filename('', f'fonts/{font_name}')
+            if os.path.isfile(package_font_path):
+                return package_font_path
+    except (ImportError, FileNotFoundError, ModuleNotFoundError):
+        pass
+    
+    # Check if fonts are in site-packages directory
+    try:
+        import sys
+        for path in sys.path:
+            if 'site-packages' in path:
+                fonts_path = os.path.join(path, 'fonts', font_name)
+                if os.path.isfile(fonts_path):
+                    return fonts_path
+    except:
         pass
     
     # System font directories by platform
