@@ -50,14 +50,6 @@ def main():
             print("Demo generation completed successfully!")
             return
         
-        if raw_config.get('demo_set', False):
-            print("Generating demo banner set...")
-            args_dict = convert_config_to_dict(config)
-            args_dict['demo_set'] = True
-            generate_demo_set(args_dict)
-            print("Demo generation completed successfully!")
-            return
-        
         # Show configuration for debugging (only if verbose)
         if config.verbose:
             show_config_debug(config)

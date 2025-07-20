@@ -47,8 +47,7 @@ def create_new_argument_parser():
     parser.add_argument('--contrast', type=str, help='Global contrast modifier (low/medium/high)')
     
     # System parameters
-    parser.add_argument('--demo', action='store_true', help='Generate demo grid')
-    parser.add_argument('--demo-set', action='store_true', help='Generate demo banner set')
+    parser.add_argument('--demo', action='store_true', help='Generate demo banner set')
     parser.add_argument('--verbose', action='store_true', help='Show detailed configuration output')
     
     # Help options
@@ -712,8 +711,6 @@ def parse_new_cli_arguments(args=None):
     # Handle system parameters
     if parsed_args.demo:
         config['demo'] = True
-    if parsed_args.demo_set:
-        config['demo_set'] = True
     
     # Store preset name for error reporting
     if parsed_args.preset:

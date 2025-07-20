@@ -162,14 +162,6 @@
   {
     "name": "demo",
     "type": "bool",
-    "help": "Generate demo grid",
-    "default": false,
-    "required": false,
-    "scope": "system"
-  },
-  {
-    "name": "demo_set",
-    "type": "bool",
     "help": "Generate demo banner set",
     "default": false,
     "required": false,

@@ -90,7 +90,7 @@ python banner_maker.py \
 - `--padding` - Padding around text and logo (px)
 
 ### Demo & Presets
-- `--demo-set` - Generate demo banner set with variations
+- `--demo` - Generate demo banner set with variations
 - `--preset` - Use built-in preset (modern_blue, purple_tech, minimal_black, etc.)
 
 ## 🎨 Built-in Presets (60+ Available)

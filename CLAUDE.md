@@ -45,7 +45,7 @@ python banner_maker.py --title "My Project" --bg "blue:purple:diagonal" --patter
 python banner_maker.py --title "My Project" --icon logo.png --accent "blue"
 
 # Generate demo set with variations
-python banner_maker.py --demo-set
+python banner_maker.py --demo
 
 # Learn CLI equivalent of preset
 python banner_maker.py --learn ocean_waves
@@ -66,7 +66,7 @@ python banner_maker.py --help-full
 ### Demo Generation
 ```bash
 # Generate full demo set (60 variations)
-python banner_maker.py --demo-set
+python banner_maker.py --demo
 
 # Single demo banner
 python demo/demo.py
@@ -192,3 +192,4 @@ When making changes:
 ## Memory Log
 
 - Her zaman nerede kaldığımızın izini tutmalıyız, bunu daha önce yapmıştık, her an bağlantımız kopabilecekmiş gibi davranmalıyız, güncellemelere başlamadan önce mutlaka hafızayı tazele
+- git commitlerde co author olmayacak

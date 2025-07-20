@@ -414,7 +414,7 @@ python banner_maker.py --help
 python banner_maker.py --learn preset_name
 
 # Generate examples of all presets
-python banner_maker.py --demo-set
+python banner_maker.py --demo
 ```
 
 ---
