@@ -1,7 +1,6 @@
 include README.md
 include LICENSE
 include requirements.txt
-include demo_defaults.json
 include parameters.json
 recursive-include core/presets *.json
 recursive-include fonts *.ttf *.txt
