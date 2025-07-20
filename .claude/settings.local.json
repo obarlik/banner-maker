@@ -30,7 +30,8 @@
       "WebFetch(domain:github.com)",
       "WebFetch(domain:openfontlicense.org)",
       "WebFetch(domain:raw.githubusercontent.com)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(git push:*)"
     ],
     "deny": []
   }

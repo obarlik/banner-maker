@@ -25,7 +25,7 @@
   "shadow_opacity": 100,
   "texture_opacity": 0,
   "min_contrast": 8.0,
-  "padding": 44,
+  "padding": 32,
   "pattern": "none",
   "pattern_density": 1.0,
   "pattern_opacity": 0,
