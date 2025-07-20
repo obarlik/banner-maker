@@ -147,6 +147,9 @@ demo_*.png
 demo_grid.png
 demo_log.txt
 
+# But keep preset documentation examples
+!docs/presets/*.png
+
 # Test results
 tests/
 
