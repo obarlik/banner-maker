@@ -1,0 +1,10 @@
+{
+  "readme_banner": {
+    "description": "Main project banner for README.md",
+    "command": "python banner_maker.py --title \"Banner Maker\" --subtitle \"Customizable Project Banner Generator\" --icon \"logo.png\" --bg \"#1e3a8a:#1d4ed8:vertical\" --pattern \"squares:#dbeafe:15\" --shape \"wave:#3b82f6:32\" --texture \"metal:15\" --effect \"bloom:0.5\" --rounded \"15\" --output \"readme_banner.png\""
+  },
+  "linkedin_banner": {
+    "description": "Personal LinkedIn profile banner",
+    "command": "python banner_maker.py --title \"Onur Barlık\" --subtitle \"Senior Full Stack Developer • Innovation & Excellence\" --bg \"#0b1426:#1a2332:diagonal\" --pattern \"dots:#81c784:28\" --shape \"wave:#64b5f6:42\" --texture \"canvas:22\" --effect \"bloom:0.65\" --rounded \"18\" --output \"linkedin_banner.png\""
+  }
+}

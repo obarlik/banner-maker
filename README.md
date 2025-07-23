@@ -2,6 +2,8 @@
 
 ![Banner Maker](readme_banner.png)
 
+<!-- To regenerate this banner: python banner_maker.py --title "Banner Maker" --subtitle "Customizable Project Banner Generator" --icon "logo.png" --bg "#1e3a8a:#1d4ed8:vertical" --pattern "squares:#dbeafe:15" --shape "wave:#3b82f6:32" --texture "metal:15" --effect "bloom:0.5" --rounded "15" --output "readme_banner.png" -->
+
 A powerful, customizable Python tool to generate modern banners for your projects. Create professional-looking banners with custom titles, subtitles, icons, colors, gradients, patterns, shapes, textures, and effects.
 
 **Developed by [obarlik](https://github.com/obarlik) at [Codechu](https://codechu.com)**
